@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+$logotitre-font: "Shrikhand", sans-serif; 
+$text-font: "Roboto", sans-serif;
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+}
+body{  
+    max-width: 768px;
+    margin: auto;
+    font-family: $text-font;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+header{
+    @include flexcenter;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 25%);
+    position: relative;
+        .logo{  
+            width: 45%;
+            padding: 15px 0;
+        }
+}
+section{
+    text-align: center;
+    .localisation{
+        background: #f3f1f1;   
+        @include flexcenter;
+        height: 50px;
+        gap: 15px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .description{
+        background-color: #fafafa;
+        padding: 25px 0 35px 0;
+        font-size: 20px;
+        .firstdesc{
+            margin-bottom: 10px;
+        }
+        .secdesc{
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+    a{
+        width: 100%;
+        font-size: 14px;
+        color: #faf8f8;
+        padding: 12px 23px;
+        background: linear-gradient(0deg,($color-primary),($color-secondary));
+        border-radius: 25px;
+    }
+}
+nav{
+    margin-left: 15px;
+    h1{
+        margin: 30px  0;
+    }
+    li{
+        display:flex;
+        align-items: center;
+        gap:5%;
+        flex-basis: 100%;
+        margin: 15px;
+        height: 70px;
+        background-color: #fafafa;
+        font-size: 14px;
+        border-radius: 25px;
+        .numero{
+            height: 25px;
+            width: 25px;
+            min-width: 25px;
+            background: #9356DC;
+            border-radius: 25px;
+            margin-left: -12px;
+            p{
+                width: 100%;
+                text-align: center;
+                padding-top: 4px;
+                color: #fafafa
+            }
+        }
+    }
+}
+article{
+    background: #fafafa;
+    margin-top: 40px;
+    h1{
+        padding: 30px 0 10px 10px;
+    }
+    .allmenu{
+        
+    }
+    .menu{
+        border: 1px solid black;
+        height: 220px;
+        width: auto;
+        border-radius: 25px; 
+        
+        img{
+            width: 100%;
+            border-radius: 25px 25px 0 0 ;
+            object-fit: cover;
+        }
+        ._desc{ 
+            display: flex;
+            font-size: 16px;
+            h2{
+                font-size: 16px;
+            }
+            
+        }   
+    }
+}
+footer{
+    .logo{
+        
+        width: 30%;
+    }
+    .infofooter{
+        @include flexcolumn;
+    }
+}

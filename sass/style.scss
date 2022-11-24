@@ -39,6 +39,47 @@ header{
             padding: 15px 0;
         }
 }
+main{
+    img{   
+        max-width: 100%;
+        height: 250px;
+    }
+    .choixplats{
+        background: #f5f5f5;
+        border-radius: 25px 25px 0 0;
+        margin-top: -70px;
+        position: relative;
+    }
+    .titrepagemenu{
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10px 20px 10px;
+        font-family: $logotitre-font;
+        font-size: 20px;
+        
+    }
+    .allplats{
+        margin: 0 10px ;
+            .plats{
+            margin: 10px 0;    
+            padding: 10px;
+            background-color: white;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            box-shadow: 0px 0px 5px lightgray;
+            h5{
+                font-size: 16px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
 section{
     text-align: center;
     .localisation{
@@ -127,12 +168,8 @@ article{
         &_desc{
             display: flex;
             justify-content: space-between;
-            padding: 10px 15px ;
-            
-        }
-           
-        
-    
+            padding: 10px 15px ;           
+        }  
 }
 footer{
     padding: 15px 0 25px 0;

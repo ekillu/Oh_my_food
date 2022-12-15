@@ -1,0 +1,19 @@
+footer{
+    padding: 15px 0 25px 0;
+    background: #4b4b4b;
+    h1{
+        font-family: $logotitre-font;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .infofooter{
+        @include flexcolumn;
+        margin: 0 15px;
+        color: white;
+        gap: 5px;
+    }
+    i{
+        margin-right: 15px;
+        width: 10px;
+    }
+}

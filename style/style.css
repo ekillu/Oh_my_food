@@ -71,6 +71,26 @@ main .titrepagemenu {
 main .allplats {
   margin: 0 10px;
 }
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .allplats .delay1 {
+  animation: fadein 1s;
+  animation-delay: 0.1s;
+}
+main .allplats .delay2 {
+  animation: fadein 1s;
+  animation-delay: 0.2s;
+}
+main .allplats .delay3 {
+  animation: fadein 1s;
+  animation-delay: 0.3s;
+}
 main .allplats .plats {
   margin: 10px 0;
   padding: 10px;
@@ -81,10 +101,10 @@ main .allplats .plats {
   align-items: flex-end;
   box-shadow: 0px 0px 5px lightgray;
 }
-main .allplats .plats h5 {
+main .allplats h5 {
   font-size: 16px;
 }
-main .allplats .plats p {
+main .allplats p {
   font-size: 14px;
 }
 main .commander {

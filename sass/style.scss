@@ -57,9 +57,9 @@ main{
         color: #3b8468;
         position: absolute;
         padding: 6px 12px;
-        margin: 15px;
         border-radius: 2px;
-        right: 15px;  
+        right: 15px; 
+        top: 15px;
     }
     img{
         width: 100%;  
@@ -72,7 +72,10 @@ main{
         border-radius: 25px 25px 0 0;
         margin-top: -70px;
         position: relative;
+            
     }
+    
+
     .titrepagemenu{
         margin: 10px;
         display: flex;
@@ -80,21 +83,53 @@ main{
         justify-content: space-between;
         padding: 20px 10px 20px 10px;
         font-family: $logotitre-font;
-        font-size: 20px;  
-    }
+        
+    } 
+        .likemenu{
+            position:relative;
+            left: 19px;
+        }
+        .likemenu2{
+            color: transparent;
+        }
+        .likemenu:hover{
+            display: none; 
+        }
+        .likemenu2:hover{
+            cursor: pointer;
+            position: relative;
+            font-size : 16px;
+            background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+        }
+        .likemenu2:focus{
+            position: relative;
+            font-size : 16px;
+            background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
     .allplats{
-        margin: 0 10px ;    
+        margin: 0 10px ; 
+            .cont{
+                overflow: hidden;
+            }
             @keyframes fadein {
                 from {
+                    top: 150px;
                     opacity:0;
                 }
                 to {
+                    top: 0px;
                     opacity:1;
                 }
             }  
             .delay1{
                 animation: fadein 1s  ;
                 animation-delay: 0.1s;
+                
             } 
             .delay2{
                 animation: fadein 1s ;
@@ -113,15 +148,17 @@ main{
             justify-content: space-between;
             align-items: flex-end;
             box-shadow: 0px 0px 5px lightgray;
-            
+            position: relative;
+            }
+            h4{
+                margin: 25px 0;   
             }
             h5{
                 font-size: 16px;
             }
             p{
                 font-size: 14px;
-            }
-        
+            } 
     }
     .commander{
         padding: 40px 0;
@@ -209,7 +246,8 @@ article{
     padding: 0 15px 30px;
 }   
 .menu{
-   
+    display: block;
+    position: relative;
     height: 250px;        
     width: 100%;
     border-radius: 25px;
@@ -227,18 +265,34 @@ article{
             align-items: center;
             padding: 10px 15px ;             
         }
-       
-        .fa-heart:hover{
+        
+        .fa-regular{
+            position:relative;
+            left: 20px;
+        }
+        .fa-solid{
+            color: transparent;
+        }
+        .fa-regular:hover{
+            display: none; 
+        }
+        .fa-solid:hover{
+            transition: 1s;
+            position: relative;
+            font-size : 16px;
+            background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+        }
+        .fa-solid:focus{
+            transition: 1s;
+            position: relative;
             font-size : 16px;
             background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-           
         }
-        .hidden{display: none;
-        }       
     }
-
 footer{
     padding: 15px 0 25px 0;
     background: #4b4b4b;

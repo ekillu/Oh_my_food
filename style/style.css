@@ -43,9 +43,9 @@ main .nouveau {
   color: #3b8468;
   position: absolute;
   padding: 6px 12px;
-  margin: 15px;
   border-radius: 2px;
   right: 15px;
+  top: 15px;
 }
 main img {
   width: 100%;
@@ -66,16 +66,45 @@ main .titrepagemenu {
   justify-content: space-between;
   padding: 20px 10px 20px 10px;
   font-family: "Shrikhand", sans-serif;
-  font-size: 20px;
+}
+main .likemenu {
+  position: relative;
+  left: 19px;
+}
+main .likemenu2 {
+  color: transparent;
+}
+main .likemenu:hover {
+  display: none;
+}
+main .likemenu2:hover {
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .likemenu2:focus {
+  position: relative;
+  font-size: 16px;
+  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 main .allplats {
   margin: 0 10px;
 }
+main .allplats .cont {
+  overflow: hidden;
+}
 @keyframes fadein {
   from {
+    top: 150px;
     opacity: 0;
   }
   to {
+    top: 0px;
     opacity: 1;
   }
 }
@@ -100,6 +129,10 @@ main .allplats .plats {
   justify-content: space-between;
   align-items: flex-end;
   box-shadow: 0px 0px 5px lightgray;
+  position: relative;
+}
+main .allplats h4 {
+  margin: 25px 0;
 }
 main .allplats h5 {
   font-size: 16px;
@@ -199,6 +232,8 @@ article h1 {
 }
 
 .menu {
+  display: block;
+  position: relative;
   height: 250px;
   width: 100%;
   border-radius: 25px;
@@ -217,14 +252,31 @@ article h1 {
   align-items: center;
   padding: 10px 15px;
 }
-.menu .fa-heart:hover {
+.menu .fa-regular {
+  position: relative;
+  left: 20px;
+}
+.menu .fa-solid {
+  color: transparent;
+}
+.menu .fa-regular:hover {
+  display: none;
+}
+.menu .fa-solid:hover {
+  transition: 1s;
+  position: relative;
   font-size: 16px;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu .hidden {
-  display: none;
+.menu .fa-solid:focus {
+  transition: 1s;
+  position: relative;
+  font-size: 16px;
+  background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 footer {

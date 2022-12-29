@@ -1,0 +1,31 @@
+section{
+    text-align: center;
+    .localisation{
+        background: #f3f1f1;   
+        @include flexcenter;
+        height: 50px;
+        gap: 15px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .description{
+        background-color: #fafafa;
+        padding: 25px 0 35px 0;
+        font-size: 20px;
+        .firstdesc{
+            margin-bottom: 10px;
+        }
+        .secdesc{
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+    a{
+        width: 100%;
+        font-size: 14px;
+        color: #faf8f8;
+        padding: 12px 23px;
+        background: linear-gradient(0deg,($color-primary),($color-secondary));
+        border-radius: 25px;
+    }
+}

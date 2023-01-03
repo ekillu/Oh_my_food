@@ -13,6 +13,16 @@ nav{
         background-color: #fafafa;
         font-size: 14px;
         border-radius: 25px;
+        box-shadow: 0px 3px 6px rgb(167, 165, 165);
+        &.carterose{
+            background: #f5edff ;
+        }
+        .iconegray{
+            color: gray;
+        }
+        .iconeviolet{
+            color: $color-primary;
+        }
         .numero{
             height: 25px;
             width: 25px;
@@ -26,6 +36,8 @@ nav{
                 padding-top: 4px;
                 color: #fafafa;
             }
+            
+
         }
     }
 }

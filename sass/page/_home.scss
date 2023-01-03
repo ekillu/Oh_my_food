@@ -1,113 +1,72 @@
-main{ 
-    img{
-        width: 100%;  
-        max-width: 100%;
-        height: 250px;
-        object-fit: cover;
+article{
+    background: #fafafa;
+    margin-top: 40px;
+    h1{
+        padding: 30px 0 10px 15px;
     }
-    .choixplats{
-        background: #f5f5f5;
-        border-radius: 25px 25px 0 0;
-        margin-top: -70px;
-        position: relative;      
+}
+.allmenu{
+    padding: 0 15px 30px;
+}   
+.menu{
+    display: block;
+    position: relative;
+    height: 250px;        
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 5px rgb(167, 165, 165);
+    .nouveau{  
+        background: #a9e0d1;
+        color: #3b8468;
+        position: absolute;
+        padding: 6px 12px;
+        border-radius: 2px;
+        right: 15px; 
+        top: 15px;
     }
-    .titrepagemenu{
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 10px 20px 10px;
-        font-family: $logotitre-font; 
-    } 
-        .likemenu{
-            left: 19px;
+        img{
+            width: 100%;
+            height: 180px;
+            border-radius: 25px 25px 0 0 ;
+            object-fit: cover;
         }
-        .likemenu2{
-            color: transparent;
+        &_desc{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px ;             
         }
-        .likemenu:hover{
-            display: none; 
+        .heartmenu{
+            font-size: 21px;
+            position:absolute ;
+            right: 40px;
+            bottom: 45px;  
         }
-        .likemenu2:hover{
+        .fa-regular{
             cursor: pointer;
-            position: relative;
-            font-size : 16px;
-            background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;  
+            position: absolute;
+            background: transparent;     
         }
-        .likemenu2:focus{
-            position: relative;
-            font-size : 16px;
+        .fa-solid{
+            cursor: pointer;
+            position: absolute;
+            -webkit-text-fill-color: transparent;
+        } 
+        .heartmenu:hover{
+            cursor: pointer;
+        }       
+        .fa-solid:hover{
+            cursor: pointer;
             background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-    .allplats{
-        margin: 0 10px ; 
-            .cont{
-                overflow: hidden;
-            }
-            @keyframes fadein {
-                0% {
-                    top: 45px;
-                    opacity:0;
-                }
-                70% {
-                    top: 0px;
-                    opacity:0.5;
-                }
-                100%{
-                    opacity: 1;
-                }
-            }  
-            .delay1{
-                animation: fadein 1s  ;
-                animation-delay: 0.1s;
-                
-            } 
-            .delay2{
-                animation: fadein 1s ;
-                animation-delay:  0.2s; 
-            }
-            .delay3{
-                animation: fadein 1s ;
-                animation-delay:  0.3s;
-            }
-            .barreverte{   
-                margin-right: 95%;
-                color: transparent;
-                background-color: $color-tertiary;  
-            }
-            .plats{
-            margin: 10px 0;    
-            padding: 10px;
-            background-color: white;
-            border-radius: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            box-shadow: 0px 0px 5px lightgray;
-            position: relative;
-            }
-            h4{
-                margin: 25px 0;   
-            }
-            h5{
-                font-size: 16px;
-            }
-            p{
-                font-size: 14px;
-            } 
-            .validationplat{
-                position: absolute;
-                background-color: $color-tertiary;
-                align-self: center;
-                padding: 19px;
-                border-radius: 0 15px 15px 0;
-                left: 93%;   
-            }
-            .validationplat:hover{               
-            }
-    }   
-}
+            
+        }       
+        .fa-solid:active{
+            cursor: pointer;
+            background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;           
+        }  
+    }

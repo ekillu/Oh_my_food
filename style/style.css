@@ -67,6 +67,16 @@ nav li {
   background-color: #fafafa;
   font-size: 14px;
   border-radius: 25px;
+  box-shadow: 0px 3px 6px rgb(167, 165, 165);
+}
+nav li.carterose {
+  background: #f5edff;
+}
+nav li .iconegray {
+  color: gray;
+}
+nav li .iconeviolet {
+  color: #9356DC;
 }
 nav li .numero {
   height: 25px;
@@ -117,6 +127,27 @@ section a {
   border-radius: 25px;
 }
 
+footer {
+  padding: 15px 0 25px 0;
+  background: #4b4b4b;
+}
+footer h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+footer .infofooter {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  color: white;
+  gap: 5px;
+}
+footer i {
+  margin-right: 15px;
+  width: 10px;
+}
+
 article {
   background: #fafafa;
   margin-top: 40px;
@@ -159,46 +190,36 @@ article h1 {
   align-items: center;
   padding: 10px 15px;
 }
+.menu .heartmenu {
+  font-size: 21px;
+  position: absolute;
+  right: 40px;
+  bottom: 45px;
+}
 .menu .fa-regular {
-  position: relative;
-  left: 20px;
+  cursor: pointer;
+  position: absolute;
+  background: transparent;
 }
 .menu .fa-solid {
-  color: transparent;
+  cursor: pointer;
+  position: absolute;
+  -webkit-text-fill-color: transparent;
 }
-.menu .fa-regular:hover {
-  display: none;
+.menu .heartmenu:hover {
+  cursor: pointer;
 }
 .menu .fa-solid:hover {
+  cursor: pointer;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu .fa-solid:focus {
+.menu .fa-solid:active {
+  cursor: pointer;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-footer {
-  padding: 15px 0 25px 0;
-  background: #4b4b4b;
-}
-footer h1 {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-footer .infofooter {
-  display: flex;
-  flex-direction: column;
-  margin: 0 15px;
-  color: white;
-  gap: 5px;
-}
-footer i {
-  margin-right: 15px;
-  width: 10px;
 }
 
 main img {
@@ -221,26 +242,31 @@ main .titrepagemenu {
   padding: 20px 10px 20px 10px;
   font-family: "Shrikhand", sans-serif;
 }
+main .heartpage {
+  cursor: pointer;
+  font-size: 21px;
+  right: 18px;
+  bottom: 8px;
+  position: relative;
+}
 main .likemenu {
-  left: 19px;
+  cursor: pointer;
+  position: absolute;
+  background: transparent;
 }
 main .likemenu2 {
-  color: transparent;
-}
-main .likemenu:hover {
-  display: none;
+  cursor: pointer;
+  position: absolute;
+  -webkit-text-fill-color: transparent;
 }
 main .likemenu2:hover {
   cursor: pointer;
-  position: relative;
-  font-size: 16px;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main .likemenu2:focus {
-  position: relative;
-  font-size: 16px;
+main .likemenu2:active {
+  cursor: pointer;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -276,38 +302,68 @@ main .allplats .delay3 {
   animation: fadein 1s;
   animation-delay: 0.3s;
 }
-main .allplats .barreverte {
-  margin-right: 95%;
-  color: transparent;
-  background-color: #99E2D0;
-}
 main .allplats .plats {
   margin: 10px 0;
-  padding: 10px;
   background-color: white;
   border-radius: 15px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
   box-shadow: 0px 0px 5px lightgray;
-  position: relative;
 }
 main .allplats h4 {
-  margin: 25px 0;
+  margin: 20px 0;
 }
 main .allplats h5 {
   font-size: 16px;
+  margin: 0 0 0 10px;
 }
 main .allplats p {
   font-size: 14px;
+  margin: 0 0 0 10px;
+}
+main .allplats .plats_nom {
+  padding: 10px 0;
+  width: 90%;
+}
+main .allplats .plats_prix p {
+  padding: 10px 10px 10px 0;
+  width: 10%;
 }
 main .allplats .validationplat {
-  position: absolute;
-  background-color: #99E2D0;
-  align-self: center;
-  padding: 19px;
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  background: #99E2D0;
   border-radius: 0 15px 15px 0;
-  left: 93%;
+  width: 0%;
+  opacity: 0;
+}
+main .allplats .validationplat:hover {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+main .allplats .validationplat:active {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    width: 0%;
+    opacity: 0.5;
+  }
+  to {
+    width: 10%;
+    opacity: 1;
+  }
+}
+main .allplats .fa-solid {
+  align-self: center;
+  color: #99E2D0;
+  padding: 3px;
+  background: white;
+  border-radius: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

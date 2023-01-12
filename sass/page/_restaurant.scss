@@ -1,4 +1,5 @@
 main{ 
+    z-index: 1000;
     img{
         width: 100%;  
         max-width: 100%;
@@ -25,14 +26,10 @@ main{
         font-size: 21px;
         right: 18px;
         bottom: 8px;
-        
-    
-        position:relative ;
-            
+        position:relative ;  
     }
     .likemenu{
         cursor: pointer;
-
         position: absolute;
         background: transparent;  
         
@@ -57,120 +54,96 @@ main{
     }
     .allplats{
         margin: 0 10px ; 
-            .cont{
-                overflow: hidden;
+        .barreverte{
+            margin: 5px 0;
+            width: 35px;
+            height: 4px;
+            background-color: $color-tertiary;
+        }
+        
+        @keyframes fadein {
+            0% {
+                top: 45px;
+                opacity:0;
             }
-            @keyframes fadein {
-                0% {
-                    top: 45px;
-                    opacity:0;
-                }
-                70% {
-                    top: 0px;
-                    opacity:0.5;
-                }
-                100%{
-                    opacity: 1;
-                }
-            }  
-            .delay1{
-                animation: fadein 1s  ;
-                animation-delay: 0.1s;
-                
-            } 
-            .delay2{
-                animation: fadein 1s ;
-                animation-delay:  0.2s; 
+            70% {
+                top: 0px;
+                opacity:0.5;
             }
-            .delay3{
-                animation: fadein 1s ;
-                animation-delay:  0.3s;
+            100%{
+                opacity: 1;
             }
-           
-
-
-
-            .plats{
-            
+        }  
+        .delay1{
+            animation: fadein 1s  ;
+            animation-delay: 0.1s;            
+        } 
+        .delay2{
+            animation: fadein 1s ;
+            animation-delay:  0.2s; 
+        }
+        .delay3{
+            animation: fadein 1s ;
+            animation-delay:  0.3s;
+        }
+        .plats{
             margin: 10px 0; 
             background-color: white;
             border-radius: 15px;
             display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;  
+            max-width: 100%;
+            overflow: hidden;
+            box-shadow: 0px 0px 5px lightgray;
+            
+        }
+        .plats_nom{ 
+            display: flex;
             align-items: flex-end;
             justify-content: space-between;
+            margin: 10px 10px;
+            width: 100%;
+        }
+       
+      
+        h5{
+            font-size: 16px;
             
-            width: 100%;  
-                  
-            box-shadow: 0px 0px 5px lightgray;
-            }
-
-            h4{
-                margin: 20px 0;
-            }
-            h5{
-                font-size: 16px;
-                margin: 0 0 0 10px;
-            }
-            p{
-                font-size: 14px;
-                margin: 0 0 0 10px;
-            }
-            .plats_nom{
-                padding: 10px 0;
-                width: 90%;
-
-            }
-            .plats_prix p{
-                
-                padding: 10px 10px 10px 0;
-                width: 10%;
-            }
-            .validationplat{
-                display: flex;
-                
-                justify-content: center;
-                align-self: stretch;
-                background: $color-tertiary;
-                border-radius: 0 15px 15px 0;
-                width: 0%;
-                opacity: 0;
-            }
-                .validationplat:hover{
-                    animation-duration: 2s;
-                    animation-name: slidein;
-                }  
-                .validationplat:active{
-                    animation-duration: 2s;
-                    animation-name: slidein;
-                }  
-                @keyframes slidein{
-                    from{
-                        
-                        width: 0%;
-                        opacity: 0.5;
-    
-                    }
-                    to{
-                        
-                        width: 10%;
-                        opacity: 1;
-                    }
-                }
-                
-                
-                .fa-solid{ 
-                    align-self: center;
-                    color: $color-tertiary;
-                    padding: 3px;
-                    background: white;
-                    border-radius: 25px;
+        }
+        p{
+            font-size: 14px;
+            
+        }
+        .validationplat{
+            display: flex;
+            justify-content: center;
+            align-self: stretch;
+            background: $color-tertiary;
+            border-radius: 0 15px 15px 0;
+            overflow: hidden;
+            width: 0;
+      
+        }
+        .fa-solid{ 
+            align-self: center;
+            color: $color-tertiary;
+            padding: 3px;
+            background: white;
+            border-radius: 25px;    
                     
-                } 
-                 
-            
-            
-            
-            
-                      
-    }   
+        } 
+        
+        .plats:hover .validationplat{
+            width: 12%;
+            animation: slide 1s ease-in;        
+        } 
+        .plats:focus .validationplat{
+            width: 10%;
+            animation: slide 3s ease-in;        
+        } 
+
+                              
+    }            
 }

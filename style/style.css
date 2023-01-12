@@ -29,6 +29,65 @@ a {
   border-radius: 25px;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 40px;
+  background: white;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: violet;
+  gap: 30px;
+  animation: fadeout 3s;
+  opacity: 0;
+}
+.preloader .loader {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+.preloader .loader::before {
+  content: "";
+  position: absolute;
+  border: 4px solid violet;
+  border-color: violet transparent violet transparent;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: loader 1.2s infinite ease-in-out;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    z-index: 999;
+  }
+  100% {
+    transform: rotate(360deg);
+    z-index: 0;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    z-index: 999;
+  }
+  90% {
+    opacity: 1;
+    z-index: 999;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
 header {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -222,6 +281,9 @@ article h1 {
   -webkit-text-fill-color: transparent;
 }
 
+main {
+  z-index: 1000;
+}
 main img {
   width: 100%;
   max-width: 100%;
@@ -274,8 +336,11 @@ main .likemenu2:active {
 main .allplats {
   margin: 0 10px;
 }
-main .allplats .cont {
-  overflow: hidden;
+main .allplats .barreverte {
+  margin: 5px 0;
+  width: 35px;
+  height: 4px;
+  background-color: #99E2D0;
 }
 @keyframes fadein {
   0% {
@@ -307,29 +372,25 @@ main .allplats .plats {
   background-color: white;
   border-radius: 15px;
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   box-shadow: 0px 0px 5px lightgray;
 }
-main .allplats h4 {
-  margin: 20px 0;
+main .allplats .plats_nom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 10px 10px;
+  width: 100%;
 }
 main .allplats h5 {
   font-size: 16px;
-  margin: 0 0 0 10px;
 }
 main .allplats p {
   font-size: 14px;
-  margin: 0 0 0 10px;
-}
-main .allplats .plats_nom {
-  padding: 10px 0;
-  width: 90%;
-}
-main .allplats .plats_prix p {
-  padding: 10px 10px 10px 0;
-  width: 10%;
 }
 main .allplats .validationplat {
   display: flex;
@@ -337,26 +398,8 @@ main .allplats .validationplat {
   align-self: stretch;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
-  width: 0%;
-  opacity: 0;
-}
-main .allplats .validationplat:hover {
-  animation-duration: 2s;
-  animation-name: slidein;
-}
-main .allplats .validationplat:active {
-  animation-duration: 2s;
-  animation-name: slidein;
-}
-@keyframes slidein {
-  from {
-    width: 0%;
-    opacity: 0.5;
-  }
-  to {
-    width: 10%;
-    opacity: 1;
-  }
+  overflow: hidden;
+  width: 0;
 }
 main .allplats .fa-solid {
   align-self: center;
@@ -364,6 +407,14 @@ main .allplats .fa-solid {
   padding: 3px;
   background: white;
   border-radius: 25px;
+}
+main .allplats .plats:hover .validationplat {
+  width: 12%;
+  animation: slide 1s ease-in;
+}
+main .allplats .plats:focus .validationplat {
+  width: 10%;
+  animation: slide 3s ease-in;
 }
 
 /*# sourceMappingURL=style.css.map */

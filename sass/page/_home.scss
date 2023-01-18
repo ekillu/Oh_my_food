@@ -41,7 +41,8 @@ article{
             font-size: 21px;
             position:absolute ;
             right: 40px;
-            bottom: 45px;  
+            bottom: 45px; 
+           
         }
         .fa-regular{
             cursor: pointer;
@@ -49,21 +50,25 @@ article{
             background: transparent;     
         }
         .fa-solid{
+            font-size: 15px;
             cursor: pointer;
             position: absolute;
             -webkit-text-fill-color: transparent;
+            transition: font-size 400ms ;
+            
         } 
         .heartmenu:hover{
             cursor: pointer;
         }       
-        .fa-solid:hover{
+        .fa-solid:hover{   
+            font-size: 21px; 
             cursor: pointer;
             background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            
         }       
         .fa-solid:active{
+            font-size: 21px;
             cursor: pointer;
             background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
             -webkit-background-clip: text;

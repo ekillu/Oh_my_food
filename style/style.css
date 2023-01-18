@@ -38,12 +38,12 @@ a {
   font-family: "Shrikhand", sans-serif;
   font-size: 40px;
   background: white;
-  z-index: 0;
+  z-index: -100;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: violet;
+  color: #FF79DA;
   gap: 30px;
   animation: fadeout 3s;
   opacity: 0;
@@ -57,35 +57,36 @@ a {
   content: "";
   position: absolute;
   border: 4px solid violet;
-  border-color: violet transparent violet transparent;
+  border-color: #FF79DA transparent #FF79DA transparent;
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  animation: loader 1.2s infinite ease-in-out;
+  animation: loader 1.2s infinite;
 }
 
 @keyframes loader {
   0% {
     transform: rotate(0deg);
-    z-index: 999;
+    z-index: 100;
   }
   100% {
     transform: rotate(360deg);
-    z-index: 0;
+    opacity: 0;
+    z-index: -100;
   }
 }
 @keyframes fadeout {
   0% {
     opacity: 1;
-    z-index: 999;
+    z-index: 100;
   }
   90% {
     opacity: 1;
-    z-index: 999;
+    z-index: 100;
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -100;
   }
 }
 header {
@@ -261,20 +262,24 @@ article h1 {
   background: transparent;
 }
 .menu .fa-solid {
+  font-size: 15px;
   cursor: pointer;
   position: absolute;
   -webkit-text-fill-color: transparent;
+  transition: font-size 400ms;
 }
 .menu .heartmenu:hover {
   cursor: pointer;
 }
 .menu .fa-solid:hover {
+  font-size: 21px;
   cursor: pointer;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .menu .fa-solid:active {
+  font-size: 21px;
   cursor: pointer;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -286,7 +291,6 @@ main {
 }
 main img {
   width: 100%;
-  max-width: 100%;
   height: 250px;
   object-fit: cover;
 }
@@ -297,11 +301,11 @@ main .choixplats {
   position: relative;
 }
 main .titrepagemenu {
-  margin: 10px;
+  margin: 10px 10px 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 10px 0px 10px;
   font-family: "Shrikhand", sans-serif;
 }
 main .heartpage {
@@ -317,17 +321,21 @@ main .likemenu {
   background: transparent;
 }
 main .likemenu2 {
+  font-size: 15px;
   cursor: pointer;
   position: absolute;
   -webkit-text-fill-color: transparent;
+  transition: font-size 400ms;
 }
 main .likemenu2:hover {
+  font-size: 21px;
   cursor: pointer;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 main .likemenu2:active {
+  font-size: 21px;
   cursor: pointer;
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -335,6 +343,10 @@ main .likemenu2:active {
 }
 main .allplats {
   margin: 0 10px;
+}
+main .allplats h4 {
+  font-weight: normal;
+  margin-top: 30px;
 }
 main .allplats .barreverte {
   margin: 5px 0;
@@ -356,18 +368,23 @@ main .allplats .barreverte {
   }
 }
 main .allplats .delay1 {
-  animation: fadein 1s;
+  animation: fadein 800ms;
   animation-delay: 0.1s;
 }
 main .allplats .delay2 {
-  animation: fadein 1s;
+  animation: fadein 800ms;
   animation-delay: 0.2s;
 }
 main .allplats .delay3 {
-  animation: fadein 1s;
+  animation: fadein 800ms;
   animation-delay: 0.3s;
 }
-main .allplats .plats {
+main .allplats .delay4 {
+  animation: fadein 800ms;
+  animation-delay: 0.4s;
+}
+main .allplats .plat {
+  position: relative;
   margin: 10px 0;
   background-color: white;
   border-radius: 15px;
@@ -375,22 +392,36 @@ main .allplats .plats {
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  max-width: 100%;
-  overflow: hidden;
   box-shadow: 0px 0px 5px lightgray;
 }
-main .allplats .plats_nom {
+main .allplats .plat_nom {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin: 10px 10px;
   width: 100%;
+  white-space: nowrap;
+}
+main .allplats .plat_nom-ellipsis p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+main .allplats .plat:hover .plat_nom-ellipsis p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 95%;
 }
 main .allplats h5 {
-  font-size: 16px;
+  font-size: 14px;
+}
+main .allplats h6 {
+  font-size: 12px;
 }
 main .allplats p {
-  font-size: 14px;
+  font-size: 12px;
 }
 main .allplats .validationplat {
   display: flex;
@@ -400,6 +431,7 @@ main .allplats .validationplat {
   border-radius: 0 15px 15px 0;
   overflow: hidden;
   width: 0;
+  transition: width 1s;
 }
 main .allplats .fa-solid {
   align-self: center;
@@ -407,14 +439,26 @@ main .allplats .fa-solid {
   padding: 3px;
   background: white;
   border-radius: 25px;
+  font-size: 12px;
 }
-main .allplats .plats:hover .validationplat {
-  width: 12%;
-  animation: slide 1s ease-in;
+main .allplats .plat:hover .fa-solid {
+  animation: demirotate 600ms;
 }
-main .allplats .plats:focus .validationplat {
-  width: 10%;
-  animation: slide 3s ease-in;
+main .allplats .plat:hover .validationplat {
+  width: 17%;
+  animation: slide 300ms;
+}
+main .allplats .plat:focus .validationplat {
+  width: 17%;
+  animation: slide 300ms;
+}
+@keyframes demirotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

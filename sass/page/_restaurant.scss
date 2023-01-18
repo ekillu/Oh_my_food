@@ -2,7 +2,6 @@ main{
     z-index: 1000;
     img{
         width: 100%;  
-        max-width: 100%;
         height: 250px;
         object-fit: cover;
     }
@@ -13,12 +12,11 @@ main{
         position: relative;      
     }
     .titrepagemenu{
-       
-        margin: 10px;
+        margin: 10px 10px 0 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 10px 20px 10px;
+        padding: 20px 10px 0px 10px;
         font-family: $logotitre-font; 
     } 
     .heartpage{
@@ -26,27 +24,29 @@ main{
         font-size: 21px;
         right: 18px;
         bottom: 8px;
-        position:relative ;  
+        position:relative;  
     }
     .likemenu{
         cursor: pointer;
         position: absolute;
         background: transparent;  
-        
     }
     .likemenu2{
+        font-size: 15px;
         cursor: pointer;
         position: absolute;
         -webkit-text-fill-color: transparent;
+        transition: font-size 400ms;
     }
-  
     .likemenu2:hover{
+        font-size: 21px;
         cursor: pointer;
         background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;   
     }
     .likemenu2:active{
+        font-size: 21px;
         cursor: pointer;
         background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
         -webkit-background-clip: text;
@@ -54,13 +54,16 @@ main{
     }
     .allplats{
         margin: 0 10px ; 
+        h4{
+            font-weight: normal;
+            margin-top: 30px;
+        }
         .barreverte{
             margin: 5px 0;
             width: 35px;
             height: 4px;
             background-color: $color-tertiary;
         }
-        
         @keyframes fadein {
             0% {
                 top: 45px;
@@ -75,46 +78,60 @@ main{
             }
         }  
         .delay1{
-            animation: fadein 1s  ;
+            animation: fadein 800ms  ;
             animation-delay: 0.1s;            
         } 
         .delay2{
-            animation: fadein 1s ;
+            animation: fadein 800ms ;
             animation-delay:  0.2s; 
         }
         .delay3{
-            animation: fadein 1s ;
+            animation: fadein 800ms ;
             animation-delay:  0.3s;
         }
-        .plats{
+        .delay4{
+            animation: fadein 800ms ;
+            animation-delay:  0.4s;
+        }
+        .plat{
+            position: relative;
             margin: 10px 0; 
             background-color: white;
             border-radius: 15px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            width: 100%;  
-            max-width: 100%;
-            overflow: hidden;
-            box-shadow: 0px 0px 5px lightgray;
-            
+            width: 100%; 
+            box-shadow: 0px 0px 5px lightgray; 
         }
-        .plats_nom{ 
+        .plat_nom{ 
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
             margin: 10px 10px;
             width: 100%;
+            white-space: nowrap;
+        } 
+        .plat_nom-ellipsis p{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
         }
-       
-      
+        .plat:hover .plat_nom-ellipsis p{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 95%;
+        }
         h5{
-            font-size: 16px;
-            
+            font-size: 14px;
+        }
+        h6{
+            font-size: 12px;
         }
         p{
-            font-size: 14px;
-            
+            font-size: 12px;   
         }
         .validationplat{
             display: flex;
@@ -124,26 +141,34 @@ main{
             border-radius: 0 15px 15px 0;
             overflow: hidden;
             width: 0;
-      
+            transition: width 1s;
         }
         .fa-solid{ 
             align-self: center;
             color: $color-tertiary;
             padding: 3px;
             background: white;
-            border-radius: 25px;    
-                    
+            border-radius: 25px; 
+            font-size: 12px;        
         } 
-        
-        .plats:hover .validationplat{
-            width: 12%;
-            animation: slide 1s ease-in;        
+        .plat:hover .fa-solid{
+            animation: demirotate 600ms;
+        }
+        .plat:hover .validationplat{
+            width: 17%; 
+            animation: slide 300ms ;        
         } 
-        .plats:focus .validationplat{
-            width: 10%;
-            animation: slide 3s ease-in;        
-        } 
-
-                              
+        .plat:focus .validationplat{
+            width: 17%;
+            animation: slide 300ms ;        
+        }   
+        @keyframes demirotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }             
     }            
 }

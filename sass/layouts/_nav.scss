@@ -40,4 +40,14 @@ nav{
 
         }
     }
+    @media (min-width:769px) {
+        h1{
+            text-align: center;
+        }
+    }
+    @media (min-width:1050px){ 
+        .fonctionnement{
+            display: flex;
+        }
+    }
 }

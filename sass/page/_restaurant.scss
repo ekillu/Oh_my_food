@@ -19,6 +19,11 @@ main{
         padding: 20px 10px 0px 10px;
         font-family: $logotitre-font; 
     } 
+    @media (min-width:769px) {
+        .titrepagemenu{
+           margin: 10px 160px 0px 160px;
+        }   
+    }
     .heartpage{
         cursor: pointer;
         font-size: 21px;
@@ -41,14 +46,14 @@ main{
     .likemenu2:hover{
         font-size: 21px;
         cursor: pointer;
-        background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+        background: -webkit-linear-gradient(0deg, $color-primary,$color-secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;   
     }
     .likemenu2:active{
         font-size: 21px;
         cursor: pointer;
-        background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+        background: -webkit-linear-gradient(0deg, $color-primary, $color-secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;   
     }
@@ -169,6 +174,38 @@ main{
             100%{
                 transform: rotate(360deg);
             }
-        }             
+        } 
+        @media (max-width: 315px){
+            h5{
+                font-size: 12px;
+            }
+            h6{
+                font-size: 11px;
+            }
+            p{
+                font-size: 10.5px;  
+            
+            }
+            .plat_nom{
+                margin: 10px 5px;
+            }
+        } 
+        @media (min-width: 769px){ 
+            .allplats-flexdir{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin: 0px 150px; 
+            }
+            h5{
+                font-size: 15px;
+            }
+            h6{
+                font-size: 13px;
+            }
+            p{
+                font-size: 13px;  
+            }
+        }
     }            
 }

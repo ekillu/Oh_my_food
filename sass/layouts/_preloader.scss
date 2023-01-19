@@ -16,21 +16,21 @@
     gap: 30px;
     animation: fadeout 3s;
     opacity: 0;
-        .loader{
-            position: relative;
-            width: 35px;
-            height: 35px; 
+    .loader{
+        position: relative;
+        width: 35px;
+        height: 35px; 
         }
-        .loader::before{
-            content: '';
-            position: absolute;
-            border: 4px solid violet;
-            border-color: $color-secondary transparent $color-secondary transparent;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            animation: loader 1.2s infinite;
-        } 
+    .loader::before{
+        content: '';
+        position: absolute;
+        border: 4px solid violet;
+        border-color: $color-secondary transparent $color-secondary transparent;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        animation: loader 1.2s infinite;
+    } 
 }
 @keyframes loader{
     0%{

@@ -28,4 +28,7 @@ section{
         background: linear-gradient(0deg,($color-primary),($color-secondary));
         border-radius: 25px;
     }
+    a:hover{
+        filter: brightness(1.25);
+    }
 }

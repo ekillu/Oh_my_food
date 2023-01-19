@@ -28,6 +28,9 @@ a {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   border-radius: 25px;
 }
+.commander a:hover {
+  filter: brightness(1.25);
+}
 
 .preloader {
   position: fixed;
@@ -186,6 +189,9 @@ section a {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   border-radius: 25px;
 }
+section a:hover {
+  filter: brightness(1.25);
+}
 
 footer {
   padding: 15px 0 25px 0;
@@ -284,6 +290,10 @@ article h1 {
   background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.menu.menu:hover {
+  filter: brightness(1.25);
+  box-shadow: 0px 0px 6px rgb(82, 80, 80);
 }
 
 main {
